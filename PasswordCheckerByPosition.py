@@ -35,8 +35,11 @@ for line in passwords:
             #if i == min+1 or i == max+1:
                 #nOfRightP = nOfRightP+1
             WantedIndexes.append(i+1)
-    print(WantedIndexes)
-    if (min+1 in WantedIndexes and max+1 not in WantedIndexes) or (max+1 in WantedIndexes and min+1 not in WantedIndexes):
+   
+    if min in WantedIndexes and max not in WantedIndexes:
+        nOfRightP = nOfRightP+1
+        WantedIndexes.clear()
+    if max in WantedIndexes and min not in WantedIndexes:
         nOfRightP = nOfRightP+1
         WantedIndexes.clear()
     WantedIndexes.clear()
